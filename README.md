@@ -1,5 +1,5 @@
 # neboris
-A encryption package using `AES-256-CTR` and `SHA512` with random `Initialization Vectors` on the built in `crypto` module. The package creates an `16` byte initialization vector each type the module encrypts text. This module supports `CommonJS, ESM and Typescript`. If you do find any issues, bugs or need help please submit an issue in the github page so I can fix it as soon as possible.
+A encryption package using `AES-256-CTR` and `SHA512` with random `Initialization Vectors` on the built in `crypto` module. The package creates an `16` byte initialization vector each type the module encrypts text. This module supports `CommonJS, ESM and Typescript` and requires node version `16.9.0` or higher. If you do find any issues, bugs or need help please submit an issue in the github page so I can fix it as soon as possible.
 
 ## Install
 ```shell
