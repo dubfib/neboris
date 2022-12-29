@@ -1,5 +1,5 @@
 {
-  "name": "noris",
+  "name": "neboris",
   "version": "1.0.0",
   "description": "A encryption package using AES-256-CTR and SHA512 that supports CommonJS, ESM and Typescript",
   "main": "index.js",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dubfib/noris.git"
+    "url": "git+https://github.com/dubfib/neboris.git"
   },
   "keywords": [
-    "noris",
+    "neboris",
     "encrypt",
     "encryption",
     "decrypt",
@@ -23,7 +23,7 @@
   "author": "dubfib",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dubfib/noris/issues"
+    "url": "https://github.com/dubfib/neboris/issues"
   },
-  "homepage": "https://github.com/dubfib/noris#readme"
+  "homepage": "https://github.com/dubfib/neboris#readme"
 }

@@ -5,9 +5,9 @@ export class Generator {
     /**
 	 @constructor Generator constructor that generates necessary values for encryption
      * ```js
-     * import { Generator } from 'noris';
-     * const noris = new Generator();
-     * console.log(noris);
+     * import { Generator } from 'neboris';
+     * const neboris = new Generator();
+     * console.log(neboris);
      * ```
 	*/
     constructor();
@@ -15,9 +15,9 @@ export class Generator {
     /**
 	 @function Returns a AES-256 key (32 bytes)
      * ```js
-     * import { Generator } from 'noris';
-     * const noris = new Generator();
-     * console.log(noris.getKey());
+     * import { Generator } from 'neboris';
+     * const neboris = new Generator();
+     * console.log(neboris.getKey());
      * ```
      @returns {String} Key of a AES-256 key (32 bytes)
 	*/
@@ -26,9 +26,9 @@ export class Generator {
     /**
 	 @function Returns the length of the key
      * ```js
-     * import { Generator } from 'noris';
-     * const noris = new Generator();
-     * console.log(noris.getLength());
+     * import { Generator } from 'neboris';
+     * const neboris = new Generator();
+     * console.log(neboris.getLength());
      * ```
      @returns {Number} Length of the key in a number
 	*/
@@ -37,9 +37,9 @@ export class Generator {
     /**
 	 @function Returns the method that is being used
      * ```js
-     * import { Generator } from 'noris';
-     * const noris = new Generator();
-     * console.log(noris.getMethod());
+     * import { Generator } from 'neboris';
+     * const neboris = new Generator();
+     * console.log(neboris.getMethod());
      * ```
      @returns {String} Method in text as a string
 	*/
@@ -54,8 +54,8 @@ export class Encryption {
 	 @constructor Encryption constructor that allows you to encrypt text (string)
      @param {String} key A 32 byte/256 bit key that can be used for AES-256 encryption, you can generate it in the Generate class
      * ```js
-     * import { Encryption } from 'noris';
-     * const noris = new Encryption('key');
+     * import { Encryption } from 'neboris';
+     * const neboris = new Encryption('key');
      * ```
 	*/
     constructor(key: string);
@@ -64,9 +64,9 @@ export class Encryption {
      @function Decrypt function that allows you to decrypt text thats already encrypted
      @param {String} encryptedText A encrypted string that this function can decrypt if the key is the same when encrypting in the constructor
      * ```js
-     * import { Encryption } from 'noris';
-     * const noris = new Encryption('key');
-     * const decrypt = noris.decrypt('encryptedText');
+     * import { Encryption } from 'neboris';
+     * const neboris = new Encryption('key');
+     * const decrypt = neboris.decrypt('encryptedText');
      * console.log(decrypt);
      * ```
      @returns {String} A decrypted text that is decrypted with key in the constructor
@@ -77,9 +77,9 @@ export class Encryption {
      @function Encrypt function that allows you to encrypt text and decrypt it later
      @param {String} decryptedText A text that can be encrypted and can be decrypted later
      * ```js
-     * import { Encryption } from 'noris';
-     * const noris = new Encryption('key');
-     * const encrypt = noris.encrypt('Hello World!');
+     * import { Encryption } from 'neboris';
+     * const neboris = new Encryption('key');
+     * const encrypt = neboris.encrypt('Hello World!');
      * console.log(encrypt);
      * ```
      @returns {String} A encrypted string that can be decrypted later using the decrypt function
