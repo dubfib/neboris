@@ -4,6 +4,8 @@ A encryption package using `AES-256-CTR` and `SHA512` with random `Initializatio
 ## Install
 ```shell
 npm install neboris
+yarn add neboris
+pnpm add neboris
 ```
 
 ## Usage
