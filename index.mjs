@@ -1,3 +1,3 @@
-import Generator from './esm/Generator.mjs';
-import Encryption from './esm/Encryption.mjs';
+import Generator from './mjs/Generator.mjs';
+import Encryption from './mjs/Encryption.mjs';
 export default { Generator, Encryption };

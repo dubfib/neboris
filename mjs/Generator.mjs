@@ -1,8 +1,8 @@
-const crypto = require('crypto');
+import { generateKeySync } from 'crypto';
 
-module.exports = class Generator {
+export default class Generator {
     constructor() {
-        const key = crypto.generateKeySync('aes', { length: 256 });
+        const key = generateKeySync('aes', { length: 256 });
 
         this.method = 'aes-256-ctr';
         this.length = key.export().toString('hex').length;

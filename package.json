@@ -1,7 +1,7 @@
 {
   "name": "noris",
-  "version": "0.0.2",
-  "description": "A basic encryption package using AES-128 that supports CommonJS, ESM and Typescript",
+  "version": "1.0.0",
+  "description": "A encryption package using AES-256-CTR and SHA512 that supports CommonJS, ESM and Typescript",
   "main": "index.js",
   "module": "index.mjs",
   "typings": "index.d.ts",
@@ -14,9 +14,10 @@
   },
   "keywords": [
     "noris",
-    "database",
     "encrypt",
     "encryption",
+    "decrypt",
+    "decryption",
     "crypto"
   ],
   "author": "dubfib",
