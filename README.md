@@ -4,9 +4,9 @@ A encryption package using `AES-256-CTR` and `SHA512` with random `Initializatio
 ## Install
 Neboris can be installed from your preferred package manager.
 ```ansi
-npm install neboris
-yarn add neboris
-pnpm add neboris
+[2;31mnpm[0m install neboris
+[2;34myarn[0m add neboris
+[2;33mpnpm[0m add neboris
 ```
 
 ## Usage
