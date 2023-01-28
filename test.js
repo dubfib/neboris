@@ -1,6 +1,6 @@
 const { Suite } = require("benchmark");
 const { encrypt, decrypt } = require("aes256");
-const Instance = require('./index');
+const Instance = require('neboris');
 
 const key = "8dbbba31e2d004091c0db20de4cd731d9d07de06611e9db6ec995e60ff59c331";
 const phrase = "Hello World!";
