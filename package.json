@@ -1,0 +1,30 @@
+{
+  "name": "neboris",
+  "version": "2.0.0",
+  "description": "A text encrypt and decrypt module using AES256",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dubfib/neboris.git"
+  },
+  "keywords": [
+    "neboris",
+    "encrypt",
+    "decrypt",
+    "encryption",
+    "decryption",
+    "aes",
+    "aes256",
+    "crypto"
+  ],
+  "author": "dubfib",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dubfib/neboris/issues"
+  },
+  "homepage": "https://github.com/dubfib/neboris#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
