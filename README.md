@@ -37,5 +37,8 @@ const { randomBytes } = require('crypto');
 console.log(randomBytes(32));
 ```
 
+## Notice
+This module shouldn't be used for passwords, you should use [bcrypt](https://www.npmjs.com/package/bcrypt) instead. If you want to encrypt buffers and not just strings use the [aes256](https://www.npmjs.com/package/aes256) library for that as this module can only encrypt and decrypt text.
+
 ## License
 This project is currently under the `MIT` license.
