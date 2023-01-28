@@ -32,7 +32,7 @@ const decrypt = neboris.decrypt(encrypt);
 console.log(encrypt, decrypt);
 ```
 You can generate a key by using the built in [crypto](https://nodejs.org/api/crypto.html) module.
-```
+```js
 const { randomBytes } = require('crypto');
 console.log(randomBytes(32));
 ```
