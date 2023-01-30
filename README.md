@@ -5,7 +5,15 @@
 </p>
 
 A package that allows you encrypt and decrypt text easily, this package uses `aes-256-ctr` to encrypt and decrypt text with `Initialization Vectors`.
-  
+
+## Install
+This package can be installed with your preferred package manager for Node.js
+```shell
+npm install neboris
+yarn add neboris
+pnpm add neboris
+```
+
 ## Benchmark
 This package could be a replacement for another package named [aes256](https://npmjs.com/package/aes256) and is faster in benchmarks. Bechmarks are ran using the [benchmark](https://npmjs.com/package/benchmark) package.
 
