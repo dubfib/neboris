@@ -16,6 +16,7 @@
     "decryption",
     "aes",
     "aes256",
+    "aes-256-ctr",
     "crypto"
   ],
   "author": "dubfib",

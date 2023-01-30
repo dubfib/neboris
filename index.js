@@ -16,8 +16,8 @@ module.exports = class Instance {
     };
 
     encrypt(content) {
-        //WILL ADD CHECKS LATER!
-        //if (typeof content !== 'string' || !content) throw new TypeError('Invalid content provided, must be non-empty string!');
+        if (!content) throw new TypeError('Invalid content provided, must be non-empty string or buffer!');
+
         const iv = randomBytes(16);
 
         const cipher = createCipheriv(
@@ -29,27 +29,22 @@ module.exports = class Instance {
         );
 
         if (typeof content === 'string') {
-            return Buffer.concat(
-                [ 
-                    iv, 
-                    cipher.update(Buffer.from(content)), 
-                    cipher.final()
-                ]
-            ).toString(this.encoding);
-        } else {
-            return Buffer.concat(
-                [ 
-                    iv, 
-                    cipher.update(content), 
-                    cipher.final()
-                ]
-            );
-        };
+            return Buffer.concat([ 
+                iv, 
+                cipher.update(Buffer.from(content)), 
+                cipher.final()
+            ]).toString(this.encoding);
+        } else if (Buffer.isBuffer(content)) {
+            return Buffer.concat([ 
+                iv,
+                cipher.update(content), 
+                cipher.final()
+            ]);
+        } else throw new TypeError('Invalid content provided, must be non-empty string or buffer!');
     };
 
     decrypt(content) {
-        //WILL ADD CHECKS LATER!
-        //if (typeof content !== 'string' || !content) throw new TypeError('Invalid content provided, must be non-empty string!');
+        if (!content) throw new TypeError('Invalid content provided, must be non-empty string or buffer!');
 
         const input = Buffer.from(
             content, 
@@ -69,13 +64,11 @@ module.exports = class Instance {
             return decipher.update(
                 input.subarray(16)
             ) + decipher.final();
-        } else {
-            return Buffer.concat(
-                [
-                    decipher.update(content),
-                    decipher.final()
-                ]
-            );
-        };
+        } else if (Buffer.isBuffer(content)) {
+            return Buffer.concat([
+                decipher.update(content),
+                decipher.final()
+            ]);
+        } else throw new TypeError('Invalid content provided, must be non-empty string or buffer!');
     };
 };
