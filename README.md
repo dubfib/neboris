@@ -1,6 +1,11 @@
 # neboris
-A package that allows you encrypt and decrypt text easily, this package uses `aes-256-ctr` to encrypt and decrypt text with `Initialization Vectors`.
+<p>
+  <a href="https://www.npmjs.com/package/neboris"><img src="https://img.shields.io/npm/v/neboris?maxAge=3600" alt="NPM version" /></a>
+  <a href="https://www.npmjs.com/package/neboris"><img src="https://img.shields.io/npm/dt/neboris?maxAge=3600" alt="NPM downloads" /></a>
+</p>
 
+A package that allows you encrypt and decrypt text easily, this package uses `aes-256-ctr` to encrypt and decrypt text with `Initialization Vectors`.
+  
 ## Benchmark
 This package could be a replacement for another package named [aes256](https://npmjs.com/package/aes256) and is faster in benchmarks. Bechmarks are ran using the [benchmark](https://npmjs.com/package/benchmark) package.
 
