@@ -36,7 +36,7 @@ This package could be a replacement for another package named [aes256](https://n
 Want to test it yourself? Go ahead, you can find the script [here](https://github.com/dubfib/neboris/blob/main/test.js).
 
 ## Usage
-This package can be used in CommonJS, ESM or Typescript. This package only has one single class `Instance` that only has two functions which are `encrypt` and `decrypt`. In this example the package will encrypt `Hello World` in both text and buffer form and decrypt it.
+This package can be used in CommonJS, ESM or Typescript. This package only has one single class `Instance` that only has two functions which are `encrypt` and `decrypt`. The `Instance` constructor takes one argument which is a `string` and thats for the key. For both `encrypt` and `decrypt` functions they both take one argument that can be either a `string` or a `buffer`. In this example the package will encrypt `Hello World` in both text and buffer form and decrypt it.
 ```js
 const Instance = require('neboris');
 const neboris = new Instance('INSERT_KEY_HERE');
