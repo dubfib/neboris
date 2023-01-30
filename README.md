@@ -55,5 +55,8 @@ const { randomBytes } = require('crypto');
 console.log(randomBytes(32).toString('hex'));
 ```
 
+## Notice
+This package shouldn't be used to encrypt passwords, you should use [bcrypt](https://npmjs.com/package/bcrypt) instead.
+
 ## License
 This project is currently under the `MIT` license.
