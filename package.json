@@ -1,6 +1,6 @@
 {
   "name": "neboris",
-  "version": "2.1.0",
+  "version": "2.1.0-beta",
   "description": "A text and buffer encrypt and decrypt module using AES256",
   "main": "index.js",
   "types": "index.d.ts",
