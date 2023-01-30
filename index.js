@@ -16,7 +16,8 @@ module.exports = class Instance {
     };
 
     encrypt(content) {
-        if (typeof content !== 'string' || !content) throw new TypeError('Invalid content provided, must be non-empty string!');
+        //WILL ADD CHECKS LATER!
+        //if (typeof content !== 'string' || !content) throw new TypeError('Invalid content provided, must be non-empty string!');
         const iv = randomBytes(16);
 
         const cipher = createCipheriv(
@@ -27,17 +28,28 @@ module.exports = class Instance {
             .slice(0, 32), iv
         );
 
-        return Buffer.concat(
-            [ 
-                iv, 
-                cipher.update(Buffer.from(content)), 
-                cipher.final()
-            ]
-        ).toString(this.encoding);
+        if (typeof content === 'string') {
+            return Buffer.concat(
+                [ 
+                    iv, 
+                    cipher.update(Buffer.from(content)), 
+                    cipher.final()
+                ]
+            ).toString(this.encoding);
+        } else {
+            return Buffer.concat(
+                [ 
+                    iv, 
+                    cipher.update(content), 
+                    cipher.final()
+                ]
+            );
+        };
     };
 
     decrypt(content) {
-        if (typeof content !== 'string' || !content) throw new TypeError('Invalid content provided, must be non-empty string!');
+        //WILL ADD CHECKS LATER!
+        //if (typeof content !== 'string' || !content) throw new TypeError('Invalid content provided, must be non-empty string!');
 
         const input = Buffer.from(
             content, 
@@ -53,6 +65,17 @@ module.exports = class Instance {
             input.subarray(0, 16)
         );
 
-        return decipher.update(input.subarray(16)) + decipher.final();
+        if (typeof content === 'string') {
+            return decipher.update(
+                input.subarray(16)
+            ) + decipher.final();
+        } else {
+            return Buffer.concat(
+                [
+                    decipher.update(content),
+                    decipher.final()
+                ]
+            );
+        };
     };
 };
