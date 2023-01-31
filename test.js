@@ -1,5 +1,5 @@
 const { Suite } = require("benchmark");
-const { encrypt, decrypt } = require("aes256");
+const { createCipher, encrypt, decrypt } = require("aes256");
 const Instance = require('neboris');
 
 const key = "8dbbba31e2d004091c0db20de4cd731d9d07de06611e9db6ec995e60ff59c331";
@@ -8,11 +8,13 @@ const buffer = Buffer.from(phrase);
 
 new Suite()
 .add("aes256", async () => {
-    const encryptedText = encrypt(key, phrase);
-    decrypt(key, encryptedText);
+    const aes256 = createCipher(key);
+    
+    const encryptedText = aes256.encrypt(phrase);
+    aes256.decrypt(encryptedText);
 
-    const encryptBuffer = encrypt(key, buffer);
-    decrypt(key, encryptBuffer);
+    const encryptBuffer = aes256.encrypt(buffer);
+    aes256.decrypt(encryptBuffer);
 })
 .add("neboris", async () => {
     const neboris = new Instance(key);
