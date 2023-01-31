@@ -2,7 +2,7 @@ const {
     randomBytes, 
     createCipheriv, 
     createDecipheriv, 
-    createHash 
+    createHash
 } = require('crypto');
 
 module.exports = class Instance {
